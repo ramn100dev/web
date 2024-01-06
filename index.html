@@ -7,25 +7,69 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sobreMi"></div>
-    <div class="main">
-        <div class="experiencia"></div>
-        <div class="content">
-            <img src="logo.png">
-            <h3>Ramn Aplications’ and Multimedia</h3>
-            <h1>BIENVENIDO</h1>
-            <h4>Llamame Ramn, apasionado por la tecnologia y el codigo</h4>
-            <div class="puntos">
-                <div class="P1">1.Sobre mi</div> 
-                <div class="P2">2.Experiencia</div>
-                <div class="P3">3.Conocimientos</div>
-                <div class="P4">4.Proyectos</div>
+    <div id="sobreMi" onclick="sobreMi()">
+        <div id="sobreMiContent">
+            <img src="foto.png">
+            Me llamo Ramon Morillas y soy un estudiante de DAM dentro de la escuela Estech. 
+            El mundo de la programación y la computación me fascina y quiero dedicar mi vida a ello.
+            A parte en mi tiempo libre voy al gimnasio, dibujo y juego videojuegos
+        </div>
+        <div id="index1">1</div>
+    </div>
+
+    <div id="main">
+        <div id="experiencia" onclick="experiencia()">
+            <div id="experienciaContent">
+                <div id="exp1">
+                    <div><h3>Experiencia Laboral</h3></div>
+                    <img src="media/baepapel-logo-1.png" id="bapape">
+                    La papeleria Baepapel de Baeza lleva siendo el negocio de mi familia durante mas de 20 años, 
+                    he aprendido a tener un trato respetuoso con los clientes y a seguir horarios y normas dentro del trabajo
+                </div>
+                <div id="exp2">
+                    <div><h3>Formación y estudios</h3></div>
+                    <img src="media/logo_estech.png" id="estich">
+                    -Titulo de Bachillerato en el instituto Andres del Vandelvira de Baeza<br>
+                    -B1 de Ingles<br>
+                    -Grado superior de Desarrollo de Aplicaciones Multiplataforma en la Escuela Estech
+                </div>
+            </div>
+            <div id="index2">2</div>
+        </div>
+        <div>
+            <img src="media/logo.png" id="logo" onclick="checkerContent()">
+            <div id="content">
+                <h3>Ramn Aplications’ and Multimedia</h3>
+                <h1>BIENVENIDO</h1>
+                <h4>Llamame Ramn, apasionado por la tecnologia y el codigo</h4>
+            </div>
+            <div id="puntos">
+                <div id="P1" onclick="sobreMi()">1.Sobre mi</div> 
+                <div id="P2" onclick="experiencia()">2.Experiencia</div>
+                <div id="P3" onclick="conocimientos()">3.Conocimientos</div>
+                <div id="P4" onclick="proyectos()">4.Proyectos</div>
             </div>
         </div>
-        <div class="conocimientos"></div>
+        <div id="conocimientos" onclick="conocimientos()">
+            <div id="index3">3</div>
+            <div id="conocimientosContent">
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="proyectos"></div>
+    <div id="proyectos" onclick="proyectos()">
+        <div id="index4">4</div>
+        <div id="proyectosContent">
+            TEXTO EJEMPLO
+        </div>
+    </div>
 </body>
 
 <script src="script.js"></script>
 </html>
+
