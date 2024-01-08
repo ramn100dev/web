@@ -1,17 +1,37 @@
+/* ORGANIZACION DEL ARCHIVO "script.js"
+
+    1.Variables para almacenar los id del HTML importantes
+
+    2.Funciones para mostrar el contenido de los apartados
+    -sobreMi
+    -experiencia
+    -conocimientos
+    -proyectos
+    -check
+
+    3.Funcion eraseContent para borrar todo menos los puntos
+
+    (☞⌐▀͡ ͜ʖ͡▀ )☞
+
+    -----------
+
+    NOTAS: Me habria gustado, igual que el main se edita cuando se abre el apartado 1 o 4, que hiciera lo mismo en el 2 y 3, dejando
+    solo el logo, y los puntos cambiarian a tener un flex-direction: row, de forma que vayan uno debajo de otro, creo que es una buena
+    idea ya que el usuario promedio tendra mas facil para entender que para cerrar todas las pestañas solo debe de cerrar el logo, aunque
+    ahora mismo no dispongo del tiempo para perfeccionarlo, mas en adelante lo terminare ;-;
+
+    NOTAS SOBRE EL ERROR DEL APARTADO 1,2,3: No entiendo el error que me muestra en la consola al interactuar con el logo, lo extraño
+    es que no repercute en la interfaz de la pagina, y que con el apartado 4 no pasa a pesar de que comparte exactamente la misma estructura
+    y metodologia que los otros 3 apartados, seguramente este sea la ultima cosa que intente corregir, no es importante, pero me gustaria
+    tener un codigo lo mas limpio posible
+
+    ----------
+*/ 
+
+
+//ESTA FUNCION ES NECESARIA PARA QUE LA PAGINA NO HAGA SCROLL EN NINGUNA DIRECCION (Tal vez sea el motivo por el cual causa que desde el movil se vea mal, idk, lo testeare proximamente)
 document.body.style.overflow = 'hidden';
 
-                        /* ORGANIZACION DEL ARCHIVO "script.js"
-
-                            1.Variables para almacenar los id del HTML importantes
-                            2.Funciones para mostrar el contenido de los apartados
-                            -sobreMi
-                            -experiencia
-                            -conocimientos
-                            -proyectos
-                            3.Funcion eraseContent para borrar todo menos los puntos
-
-                            (☞⌐▀͡ ͜ʖ͡▀ )☞
-                        */ 
 
 /*------------------ VARIABLES ------------------*/    
 
@@ -19,8 +39,9 @@ document.body.style.overflow = 'hidden';
 var contentIsErased = false //Bool para comprobar si se ha modificado el content
 var indice = 0 //Contador que guardara el apartado con el que se ha interactuado
 var main = document.getElementById('main')
-var mainOgHeigh = main.style.height.length
+//var mainOgHeigh = main.style.height.length
 var contentGuardado = document.getElementById('content').innerHTML
+var contentGuardado2 = document.getElementById('content2').innerHTML
 var logo = document.getElementById('logo')
 
 //Relaccionadas con los apartados
@@ -33,10 +54,11 @@ var proyectosActivated = false
 
 //LOGICA DEL CODGIGO
 /*
-    Cuando se clicka en un punto o en un div respectivo a un apartado, borra el contenido principal, muestra el del indice, accede a la
-    funcion check() que se encarga de revisar que no haya ningun otro apartado abierto, y se le asigna al indice un valor. En el caso 
-    de que se clicke de nuevo el apartado(Comprobado por un if) se restaura el contenido y el apartado, ademas de cambiar el valor
-    del indice a 0. Si se pulsa en el logo, comprueba el indice, cerrando el apartado y mostrando de nuevo el contenido
+    Cada vez que se selecciona un apartado, ya sea desde el main o desde una de las tiras de los lados, se revisa el indice en la funcion 
+    check(), para asi poder cerrar un apartado en el caso en el que haya alguno abierto. Tras esto, se guarda un nuevo indice en una 
+    variable, segun el apartado seleccionado. Si se pulsa el logo, se revisa el indice para cerrar dicho apartado, y se establece en 0
+    ya que no hay ninguno abierto. Se sigue una logica parecida cuando se clicka de nuevo sobre la etiqueta, Se cierra el apartado y se
+    establece el indice en 0
  */
 
 
@@ -48,7 +70,7 @@ function sobreMi(){
         restaurarSobreMi()
         restaurarContent()
         indice = 0
-    } else { 
+    } else { //Si no esta abierto este indice, se abre
         contentIsErased = true
         aumentarSobreMi()
         borrarContent()
@@ -59,13 +81,13 @@ function sobreMi(){
     
 }
 
-function aumentarSobreMi(){ //Se muestra el indice 1, guardando el valor, y se llama al checker para que borre el contenido
+function aumentarSobreMi(){ //Se muestra el indice 1
     var sobreMi = document.getElementById('sobreMi')
     sobreMi.id = 'sobreMiAumentado'
 }
 
 function restaurarSobreMi(){
-    var sobreMi = document.getElementById('sobreMiAumentado') //Aqui la consola da un error porque en el HTML no existe tal id, pero si esta creado y funciona correctamente, no he podido corregirlo de ninguna manera, y no me era prioritario ya que la pagina funciona de manera correcta
+    var sobreMi = document.getElementById('sobreMiAumentado') 
     sobreMi.id = 'sobreMi'
 }
 
@@ -159,7 +181,7 @@ function restaurarProyectos(){
 }               
 
 
-//CHECK (Comprueba si tiene que cerrar un indice antes de abrir otro)
+//CHECK (Comprueba si tiene que cerrar un indice antes de abrir otro, en caso contrario, simplemente no hace nada)
 
 function check(i){
     
@@ -187,7 +209,7 @@ function check(i){
 
 /*------------------ FUNCION CONTENT ------------------*/  
 
-function checkerContent(){ //Revisa si tiene que borrar o restaruar el contenido
+function checkerContent(){ //Revisa el indice que tiene que cerrar una vez que se clicka el logo y restaura el main 
     if(contentIsErased){
         contentIsErased = false
         switch (indice) {
@@ -210,7 +232,7 @@ function checkerContent(){ //Revisa si tiene que borrar o restaruar el contenido
             default:
                 break;
         }
-    } else {
+    } else { //Mensaje secreo o mai ga (─‿‿─)
         alert("Muchas gracias a mi profesora Vanesa por aguantarme, Ivan y Vicente por echarme una mano con temas del dominio, y a ti visitante de mi pagina web (づ ◕‿◕ )づ")
     }
 }
@@ -222,6 +244,9 @@ function borrarContent(){
     logo.style.maxWidth = "25%"
     logo.style.cursor = "pointer"
     logo.style.marginBottom = "20px"
+
+    var content2 = document.getElementById('content2')
+    content2.innerHTML = ''
 }
 
 function restaurarContent(){
@@ -230,4 +255,7 @@ function restaurarContent(){
     main.style.height = "60%"
     logo.style.maxWidth = "40%"
     logo.style.cursor = null
+
+    var content2 = document.getElementById('content2')
+    content2.innerHTML = contentGuardado2
 }

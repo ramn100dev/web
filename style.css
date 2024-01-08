@@ -1,16 +1,33 @@
+/* 
+    ORGANIZACION DEL ARCHIVO "style.css"
 
-                                            /* 
-                                                ORGANIZACION DEL ARCHIVO "style.css"
+    -GENERAL
+    -MAIN
+    -1.SOBRE MI
+    -2.EXPERIENCIA
+    -3.CONOCIMIENTOS
+    -4.PROTECTOS
 
-                                                -GENERAL
-                                                -MAIN
-                                                -1.SOBRE MI
-                                                -2.EXPERIENCIA
-                                                -3.CONOCIMIENTOS
-                                                -4.PROTECTOS
+    ( ◑‿◑)ɔ┏🍟--🍔┑٩(^◡^ )
 
-                                                ( ◑‿◑)ɔ┏🍟--🍔┑٩(^◡^ )
-                                            */
+    -----------
+
+    NOTAS: La pagina es funcional y estetica hasta una pantalla de 1000x568px(Tendre que caparlo de alguna forma), 
+    y en moviles no se puede ver, cuando disponga de mas tiempo intentare solucionar este problema
+
+    NOTAS SOBRE EL USO DE LOS PORCENTAJES: ¿Por que se usan los margins en los apartados desplegables? Porque la pagina
+    esta hecha de tal forma que ciertamente no la ocupa por completo, y se quedaria un espacio flotante, a parte, me facilita
+    poder escribir el contenido que se debe de mostrar una vez que dicho apartado se abra, asi de paso he conseguido que la pagina
+    se adapte bien a muchisimas pantallas, aunque eventualmente cuando quiera adaptar la pagina a otras pantallas, me sera mucho mas
+    complicado, seguramente estare entretenido el dia que me ponga a hacerlo
+
+
+    
+    Estoy bastante contento con el resultado final, creo que me ha quedado una pagina original y reconocible, que era lo que queria
+    desde un principio. ^^
+
+    -----------
+*/
 
 
 /*------------------ GENERAL ------------------*/
@@ -56,10 +73,15 @@ html, body{
 #P1, #P2, #P3, #P4{
     transition: font-size 0.2s ease-in-out;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 #P1:hover, #P2:hover, #P3:hover, #P4:hover{
     color: #C7B9FF;
     font-size: 21px;
+}
+
+#social{
+    max-width: 40px;
 }
 
 
@@ -149,7 +171,7 @@ html, body{
 
 #experienciaAumentado{
     background-color: #5F548C;
-    width: 60%;
+    width: 70%;
     height: 100%;
     margin-left: -2%;
     border-radius: 0 10px 10px 0;
@@ -176,7 +198,7 @@ html, body{
     align-items: center;
     height: 90%;
     justify-content: space-around;
-    max-width: 220px;
+    max-width: 240px;
 }
 
 #exp1{
@@ -233,7 +255,7 @@ html, body{
 
 #conocimientosAumentado {
     background-color: #5F548C;
-    width: 60%;
+    width: 70%;
     height: 100%;
     margin-right: -2%;
     border-radius: 10px 0 0 10px;
@@ -241,11 +263,21 @@ html, body{
     cursor: pointer;
     transition: width 0.2s ease-in-out;
     display: flex;
+    
 }
+
+#conocimientosContent{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 5%;
+}
+
+
 
 #index3{
     background-color: #886BFF;
-    width: 35px;
+    min-width: 35px;
     height: 35px;
     border-radius: 10px 0 0 0;
     border-bottom: 3px solid black;
@@ -279,6 +311,7 @@ html, body{
     transition: height 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
+
 }
 
 #proyectosAumentado {
@@ -291,11 +324,59 @@ html, body{
     border: 3px solid black; 
     cursor: pointer;
     transition: height 0.2s ease-in-out;
+    display: flex;
 }
 
 #proyectosContent{
     display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    width: 100%;
+    justify-content: space-around;
+    margin-right: 15px;
 }
+
+#column4{
+    max-width: 350px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-around;
+}
+
+
+
+#column4 div {
+    background-color: #886BFF;
+    max-height: 150px;
+    max-width: 400px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+#column4 img{
+    margin: 5%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#moreColumn{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5%;
+}
+
+#moreColumn h2{
+    font-size: 23px;
+}
+
+#icon{
+    max-width: 20%;
+    margin-left: 40%;
+}
+
 
 #index4 {
     background-color: #886BFF;
