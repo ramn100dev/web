@@ -241,7 +241,7 @@ function borrarContent(){
     var content = document.getElementById('content')
     content.innerHTML = ''
     main.style.height = "20%"
-    logo.style.maxWidth = "25%"
+    logo.style.maxWidth = "30%"
     logo.style.cursor = "pointer"
     logo.style.marginBottom = "20px"
 
@@ -253,7 +253,7 @@ function restaurarContent(){
     var content = document.getElementById('content')
     content.innerHTML = contentGuardado
     main.style.height = "60%"
-    logo.style.maxWidth = "40%"
+    logo.style.maxWidth = "80%"
     logo.style.cursor = null
 
     var content2 = document.getElementById('content2')
