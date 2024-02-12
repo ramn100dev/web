@@ -1,0 +1,403 @@
+/* 
+    ORGANIZACION DEL ARCHIVO "style.css"
+
+    -GENERAL
+    -MAIN
+    -1.SOBRE MI
+    -2.EXPERIENCIA
+    -3.CONOCIMIENTOS
+    -4.PROTECTOS
+
+    ( ◑‿◑)ɔ┏🍟--🍔┑٩(^◡^ )
+
+    -----------
+
+    NOTAS: La pagina es funcional y estetica hasta una pantalla de 1000x568px(Tendre que caparlo de alguna forma), 
+    y en moviles no se puede ver, cuando disponga de mas tiempo intentare solucionar este problema
+
+    NOTAS SOBRE EL USO DE LOS PORCENTAJES: ¿Por que se usan los margins en los apartados desplegables? Porque la pagina
+    esta hecha de tal forma que ciertamente no la ocupa por completo, y se quedaria un espacio flotante, a parte, me facilita
+    poder escribir el contenido que se debe de mostrar una vez que dicho apartado se abra, asi de paso he conseguido que la pagina
+    se adapte bien a muchisimas pantallas, aunque eventualmente cuando quiera adaptar la pagina a otras pantallas, me sera mucho mas
+    complicado, seguramente estare entretenido el dia que me ponga a hacerlo
+
+
+    
+    Estoy bastante contento con el resultado final, creo que me ha quedado una pagina original y reconocible, que era lo que queria
+    desde un principio. ^^
+
+    -----------
+*/
+
+
+/*------------------ GENERAL ------------------*/
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #342966; 
+    color: aliceblue;
+}
+
+
+
+/*------------------ MAIN ------------------*/
+
+#main{
+    transition: height 0.5s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60%;
+}
+
+#logo {
+    width: 70%;
+    max-width: 90%;
+}
+
+#main h1{
+    font-size: 300%
+}
+
+#puntos {
+    display: flex;
+    justify-content: space-around; 
+    text-decoration: underline;
+    font-size: 20px;
+    
+}
+
+#P1, #P2, #P3, #P4{
+    transition: font-size 0.2s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+#P1:hover, #P2:hover, #P3:hover, #P4:hover{
+    color: #C7B9FF;
+    font-size: 21px;
+}
+
+#social{
+    max-width: 40px;
+}
+
+
+
+/*------------------ 1.SOBRE MI ------------------*/
+
+#sobreMi{
+    background-color: #5F548C;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: -2%;
+    height: 8%;
+    border-radius: 0 0 10px 10px;
+    border: 3px solid black; 
+    cursor: pointer;
+    transition: height 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#sobreMiAumentado{
+    background-color: #5F548C;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: -2%;
+    height: 60%;
+    border-radius: 0 0 10px 10px;
+    border: 3px solid black; 
+    cursor: pointer;
+    transition: height 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+#sobreMiContent{
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#sobreMiContent img{
+    max-width: 30%;
+}
+
+#desc{
+    max-width: 50%;
+}
+
+#desc h1 {
+    font-size: 35px;
+}
+
+#index1{
+    background-color: #886BFF;
+    width: 35px;
+    height: 35px;
+    border-radius: 0 0 0 10px;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 200%;
+    font-weight: 1000;
+}
+
+#sobreMi:hover{
+    height: 11%;
+}
+
+
+
+/*------------------ 2.EXPERIENCIA ------------------*/
+
+#experiencia{
+    background-color: #5F548C;
+    width: 20%;
+    height: 100%;
+    margin-left: -18%;
+    border-radius: 0 10px 10px 0;
+    border: 3px solid black; 
+    cursor: pointer;
+    transition: width 0.2s ease-in-out;
+    justify-content: flex-end;
+    display: flex;
+}
+
+#experienciaAumentado{
+    background-color: #5F548C;
+    width: 50%;
+    height: 100%;
+    margin-left: -2%;
+    border-radius: 0 10px 10px 0;
+    border: 3px solid black; 
+    cursor: pointer;
+    transition: width 0.2s ease-in-out;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#experienciaContent{
+    margin-right: 50px;
+    margin-left: 5%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#exp1, #exp2{
+    background-color: #7867B7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+    justify-content: space-around;
+    max-width: 40%;
+}
+
+#exp1{
+    margin-right: 20px;
+}
+
+#exp2{
+    margin-left: 20px;
+}
+
+#bapape{
+    max-width: 40%;
+}
+
+#estich{
+    max-width: 90%;
+}
+
+#index2{
+    background-color: #886BFF;
+    min-width: 35px;
+    min-height: 35px;
+    max-height: 35px;
+    border-radius: 0 10px 0 0;
+    border-bottom: 3px solid black; 
+    border-left: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 200%;
+    font-weight: 1000;
+}
+
+#experiencia:hover{
+    width: 22%;
+}
+
+
+
+/*------------------ 3.CONOCIMIENTOS ------------------*/
+
+#conocimientos {
+    background-color: #5F548C;
+    width: 4%;
+    height: 100%;
+    margin-right: -2%;
+    border-radius: 10px 0 0 10px;
+    border: 3px solid black; 
+    cursor: pointer;
+    transition: width 0.2s ease-in-out;
+    display: flex;
+}
+
+#conocimientosAumentado {
+    background-color: #5F548C;
+    width: 50%;
+    height: 100%;
+    margin-right: -2%;
+    border-radius: 10px 0 0 10px;
+    border: 3px solid black; 
+    cursor: pointer;
+    transition: width 0.2s ease-in-out;
+    display: flex;
+    
+}
+
+#conocimientosContent{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-left: 40px;
+    width: 80%;
+}
+#data h1 {
+    font-size:30px;
+}
+#data{
+    margin-left: 5%;
+}
+
+#index3{
+    background-color: #886BFF;
+    min-width: 35px;
+    height: 35px;
+    border-radius: 10px 0 0 0;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 200%;
+    font-weight: 1000;
+}
+
+#conocimientos:hover{
+    width: 6%;
+    
+}
+
+
+
+/*------------------ 4.PROYECTOS ------------------*/
+
+#proyectos {
+    background-color: #5F548C;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: -2%;
+    height: 8%;
+    border-radius: 10px 10px 0 0;
+    border: 3px solid black; 
+    cursor: pointer;
+    transition: height 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#proyectosAumentado {
+    background-color: #5F548C;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: -2%;
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+    border: 3px solid black; 
+    cursor: pointer;
+    transition: height 0.2s ease-in-out;
+    display: flex;
+}
+
+#proyectosContent{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 1%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#column4{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+}
+
+#tabs {
+    background-color: #7867B7;
+    height: 45%;
+    display: flex;
+}
+
+#tabs div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#tabs div h2{
+    font-size: 22px;
+}
+
+#imgs{
+    width: 10%;
+}
+
+
+#index4 {
+    background-color: #886BFF;
+    height: 35px;
+    width: 35px;
+    border-radius: 10px 0 0 0;
+    border-right: 3px solid black; 
+    border-bottom: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 200%;
+    font-weight: 1000;
+}
+
+#proyectos:hover{
+    height: 11%;
+}
